@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>STORATE</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="src/assets/style/bootstrap.min.css">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Athiti">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    
+  </head>
+  <body>
+    <div id="Salt"></div>
+    <script src="/dist/build.js"></script>
+
+    <script src="src/assets/style/jquery.slim.min.js"></script>
+    <script src="src/assets/style/popper.min.js"></script>
+    <script src="src/assets/style/bootstrap.min.js"></script>
+    <script>
+      document.getElementById("img1").style.border = "solid red";
+      document.getElementById("img2").style.border = "solid #F0F0F0";
+      document.getElementById("img3").style.border = "solid #F0F0F0";
+        function currentDiv(n) {
+          showDivs(slideIndex = n);
+          document.getElementById("img1").style.border = "solid #F0F0F0";
+          document.getElementById("img2").style.border = "solid #F0F0F0";
+          document.getElementById("img3").style.border = "solid #F0F0F0";
+          document.getElementById("img" + n).style.border = "solid red";
+        }
+        
+        function showDivs(n) {
+          var i;
+          var x = document.getElementsByClassName("mySlides");
+          var dots = document.getElementsByClassName("demo");
+          if (n > x.length) {slideIndex = 1}
+          if (n < 1) {slideIndex = x.length}
+          for (i = 0; i < x.length; i++) {
+             x[i].style.display = "none";
+          }
+          for (i = 0; i < dots.length; i++) {
+             dots[i].className = dots[i].className.replace(" w3-opacity-off", "");
+          }
+          x[slideIndex-1].style.display = "block";
+          dots[slideIndex-1].className += " w3-opacity-off";
+        }
+      </script>
+      <script>
+        function myFunction() {
+          var dots = document.getElementById("dots");
+          var moreText = document.getElementById("more");
+          var btnText = document.getElementById("myBtn");
+        
+          if (dots.style.display === "none") {
+            dots.style.display = "inline";
+            btnText.innerHTML = "Show more"; 
+            moreText.style.display = "none";
+          } else {
+            dots.style.display = "none";
+            btnText.innerHTML = "Show less"; 
+            moreText.style.display = "inline";
+          }
+        }
+        </script>
+        <script>
+          function mOver() {
+            document.getElementById("btnhelp").style.borderBottom = "thick solid red";
+          }
+          
+          function mOut() {
+            document.getElementById("btnhelp").style.border = 'none';
+          }
+          </script>
+          <script>
+            // Get the modal
+            var modal = document.getElementById('myModal');
+            
+            // Get the button that opens the modal
+            var btn = document.getElementById("myBtn123");
+            
+            // Get the <span> element that closes the modal
+            var span = document.getElementsByClassName("close")[0];
+            
+            // When the user clicks the button, open the modal 
+            btn.onclick = function() {
+                modal.style.display = "block";
+            }
+            
+            // When the user clicks on <span> (x), close the modal
+            span.onclick = function() {
+                modal.style.display = "none";
+            }
+            
+            // When the user clicks anywhere outside of the modal, close it
+            window.onclick = function(event) {
+                if (event.target == modal) {
+                    modal.style.display = "none";
+                }
+            }
+            </script>
+  </body>
+</html>

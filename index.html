@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>STORATE</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="src/assets/style/bootstrap.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Athiti">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  </head>
+  <body>
+    <div id="app"></div>
+    <script src="/dist/build.js"></script>
+
+    <script src="src/assets/style/jquery.slim.min.js"></script>
+    <script src="src/assets/style/popper.min.js"></script>
+    <script src="src/assets/style/bootstrap.min.js"></script>
+    <script> 
+          document.getElementById("btn1").style.border = 'none';
+        function change(n) {
+          document.getElementById("btn1").style.border = 'none';
+          document.getElementById("btn2").style.border = 'none';
+          document.getElementById("btn3").style.border = 'none';
+          document.getElementById("btn4").style.border = 'none';
+          document.getElementById("btn" + n).style.borderBottom = "thick solid red";
+        }
+      </script>
+      <script>
+        function mOver() {
+          document.getElementById("btnhelp").style.borderBottom = "thick solid red";
+        }
+        
+        function mOut() {
+          document.getElementById("btnhelp").style.border = 'none';
+        }
+        </script>
+  </body>
+</html>
